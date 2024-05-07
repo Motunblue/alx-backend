@@ -48,6 +48,6 @@ class Server:
         return {
             "index": index,
             "next_index": max([v[0] for v in page_data]) + 1,
-            "page_size": page_size,
+            "page_size": len(page_data),
             "data": [v[1] for v in page_data]
         }
