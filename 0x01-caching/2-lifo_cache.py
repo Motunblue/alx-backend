@@ -22,7 +22,7 @@ class LIFOCache(BaseCaching):
                 x = list(self.cache_data.items())[-1]
                 del self.cache_data[x[0]]
                 self.count -= 1
-                print("DISCARD " + x[0])
+                print("DISCARD: " + x[0])
             self.cache_data[key] = item
             self.count += 1
 
