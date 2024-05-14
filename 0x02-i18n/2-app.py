@@ -22,7 +22,7 @@ def get_locale() -> str:
     return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 
-@app.route('/')
+@app.route('/', strict_slashes=False)
 def home() -> str:
     """Home route"""
     return render_template('2-index.html')
