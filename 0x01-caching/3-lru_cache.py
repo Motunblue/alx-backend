@@ -19,7 +19,6 @@ class LRUCache(BaseCaching):
         if key is not None and item is not None:
             if key in self.cache_data:
                 self.cache_data[key] = item
-                self.cache_data.move_to_end(key, last=True)
                 return
             if self.count == BaseCaching.MAX_ITEMS:
                 x, _ = self.cache_data.popitem(last=False)
